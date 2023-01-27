@@ -1,0 +1,13 @@
+
+<mat-card class="contact-card">
+    <form [formGroup]="updatedContactForm">
+        <input type="text" formControlName="first_name">
+        <input type="text" formControlName="last_name">
+        <input type="email" formControlName="email">
+        <input type="text" formControlName="phone">
+        <input type="text" formControlName="address">
+    </form>
+    <mat-card-actions>
+      <button mat-button (click)="updateContact()">UPDATE</button>
+    </mat-card-actions>
+</mat-card>

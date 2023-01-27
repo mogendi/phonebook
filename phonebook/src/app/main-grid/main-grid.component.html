@@ -1,0 +1,13 @@
+<div class="main-grid">
+    <div class="left full-length">
+        <app-contact-list
+            (changeContactInFocus)="changeInFocus($event)"
+            [stateChangeTrigger]="stateChangeTrigger"></app-contact-list>
+    </div>
+    <div class="right full-length">
+        <app-contact-details
+            [contactInFocus]="contactInFocus"
+            (changeContactInFocus)="changeInFocus($event)">
+        </app-contact-details>
+    </div>
+</div>

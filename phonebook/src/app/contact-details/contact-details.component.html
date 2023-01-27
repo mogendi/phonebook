@@ -1,0 +1,10 @@
+<div class="contact-details-container">
+    <div *ngIf="!contactInFocus" class="default-mode">
+        click on contact to view details
+    </div>
+    <div *ngIf="contactInFocus" class="contact-in-focus-mode">
+        <app-editable-contact-card
+            [contact]="contactInFocus"
+            (changeContactInFocus)="changeContact($event)"></app-editable-contact-card>
+    </div>
+</div>

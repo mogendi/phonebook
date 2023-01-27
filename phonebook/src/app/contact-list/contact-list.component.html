@@ -1,0 +1,20 @@
+<div class="contact-list-container">
+    <input id="search" type="text" (input)="onKeyStroke()" aria-label="Search">
+    <section>
+        <div class="contact-list" *ngFor="let contact of contacts">
+            <div class="contact-body">
+                <mat-checkbox
+                    [(ngModel)]="contact.selected"
+                    (change)="updateSelected()">
+            </mat-checkbox>
+                <app-contact-card
+                    [contact]="contact"
+                    (click)="setContacInFocus(contact)">
+                </app-contact-card>
+            </div>
+        </div>
+    </section>
+    <div class="delete-btn" *ngIf="selected">
+        <button mat-button (click)="deleteSelected()">DELETE SELECTED</button>
+    </div>
+</div>
